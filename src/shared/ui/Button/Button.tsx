@@ -79,11 +79,11 @@ const Action = styled.div<IButton>`
 `;
 
 export const Button = ({
-  dimension,
-  children,
-  type,
+  dimension = ButtonDimension.WIDE,
+  type = ButtonType.PRIMARY,
   onClick,
   disabled,
+  children,
 }: IButton) => {
   return (
     <ButtonWrapper dimension={dimension} type={type} onClick={onClick}>

@@ -5,7 +5,7 @@ export const DefaultContent = ({ title, children }: IDefaultContentProps) => {
   return (
     <Container>
       <Title>{title}</Title>
-      {children}
+      <>{children}</>
     </Container>
   );
 };

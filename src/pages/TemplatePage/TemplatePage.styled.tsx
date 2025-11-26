@@ -14,7 +14,9 @@ export const SideContent = styled.aside`
 
 export const MainContent = styled.main`
   width: 60%;
-  padding: 0 94px;
+  padding: 94px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Splitter = styled.div`
@@ -32,5 +34,9 @@ export const SplitterLine = styled.div`
 `;
 
 export const Header = styled.div`
+  height: 135px;
+`;
+
+export const Footer = styled.div`
   height: 135px;
 `;
