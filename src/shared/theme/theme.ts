@@ -3,10 +3,11 @@ export const defaultTheme = {
     // ФОН (BACKGROUND)
     background: {
       dark: "#2A2A2A", // Темно-серый фон
-      light: "#F5F5F0", // Светло-бежевый/off-white фон
+      light: "#E6E4DE", // Светло-бежевый/off-white фон
     },
     // АКЦЕНТ (ACCENT)
-    accent: "#F3E5A1", // Бледно-желтый/кремовый акцент
+    accent: "#F3E5A1FF", // Бледно-желтый/кремовый акцент
+    accentDisabled: "#F3E5A180", // Бледно-желтый/кремовый акцент (disabled)
     // ТЕКСТ ЦВЕТ (TEXT COLOR)
     text: {
       // Текст на белом фоне

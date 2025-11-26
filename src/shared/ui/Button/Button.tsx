@@ -12,13 +12,20 @@ export interface IButton {
 }
 
 const calcBackgroundColor = ({ type, disabled }: IButton) => {
+  if (disabled) {
+    return css`
+      ${({ theme }) => theme.colors.accentDisabled}
+    `;
+  }
+
   switch (type) {
     case ButtonType.PRIMARY: {
       return css`
-        ${({ theme }) => theme.colors.accent}
+        ${({ theme }) =>
+          disabled ? theme.colors.accentDisabled : theme.colors.accent}
       `;
     }
-    case ButtonType.GHOST: {
+    case ButtonType.TEXT: {
       return css`
         ${({ theme }) => theme.colors.accent}
       `;
@@ -38,18 +45,37 @@ const calcBackgroundColor = ({ type, disabled }: IButton) => {
   }
 };
 
-const ButtonWrapper = styled.div`
+const calcTextColor = ({ type }: IButton) => {
+  switch (type) {
+    case ButtonType.PRIMARY: {
+      return css`
+        ${({ theme }) => theme.colors.text.onLight.primary}
+      `;
+    }
+    default:
+      return css``;
+  }
+};
+const ButtonWrapper = styled.div<IButton>`
   display: flex;
-  padding: 8px;
   align-items: center;
+
+  width: ${({ dimension }: IButton) =>
+    dimension === ButtonDimension.WIDE ? "100%" : "auto"};
 `;
 
 const Action = styled.div<IButton>`
-  height: 60px;
-  cursor: pointer;
-  width: ${({ dimension }) =>
+  width: ${({ dimension }: IButton) =>
     dimension === ButtonDimension.WIDE ? "100%" : "auto"};
+  font-size: 36px;
+  display: flex;
+  height: 60px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
   background-color: ${calcBackgroundColor};
+  color: ${calcTextColor};
 `;
 
 export const Button = ({
@@ -60,7 +86,7 @@ export const Button = ({
   disabled,
 }: IButton) => {
   return (
-    <ButtonWrapper>
+    <ButtonWrapper dimension={dimension} type={type} onClick={onClick}>
       <Action
         dimension={dimension}
         disabled={disabled}

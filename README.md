@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# Stealth Inside
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Платформа для связи тайных покупателей с бизнесами.
 
-Currently, two official plugins are available:
+## Текущее состояние
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Проект находится на начальной стадии разработки. Реализована базовая инфраструктура.
 
-## React Compiler
+### Технологии
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- TypeScript
+- React Router DOM
+- Styled Components
+- Vite
 
-## Expanding the ESLint configuration
+### Реализовано
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#### Маршрутизация
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- `BrowserRouter` настроен в `App.tsx`
+- Базовая структура маршрутов
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+#### Авторизация
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `AuthProvider` - контекст авторизации с управлением состоянием пользователя
+- Функции регистрации и входа
+- Сохранение сессии в localStorage
+
+#### Локальная БД
+
+- `src/shared/lib/db.ts` - модуль для работы с локальной JSON БД
+- Данные хранятся в `localStorage` под ключом `stealth_inside_db`
+- Поддерживает работу с пользователями (users)
+
+#### Типы пользователей
+
+- **Тайный покупатель** (`MYSTERY_SHOPPER`)
+- **Бизнес** (`BUSINESS`)
+
+#### Статусы пользователей
+
+- `PENDING` - ожидает проверки и аккредитации
+- `VERIFIED` - проверен и аккредитован
+- `REJECTED` - аккредитация отклонена
+
+### Запуск проекта
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Структура данных
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### User
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```typescript
+{
+  id: string;
+  email: string;
+  password: string; // В реальном проекте должен быть хэш
+  type: UserType;
+  status: UserStatus;
+  createdAt: string;
+  resume?: {...}; // для тайного покупателя
+  business?: {...}; // для бизнеса
+}
 ```
+
+### Примечания
+
+- Все данные хранятся локально в `localStorage`
+- Пароли хранятся в открытом виде (для разработки)
+- В продакшене необходимо добавить хэширование паролей и бэкенд

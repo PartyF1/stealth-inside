@@ -6,6 +6,6 @@ export enum ButtonDimension {
 export enum ButtonType {
   PRIMARY = "primary",
   SECONDARY = "secondary",
-  GHOST = "ghost",
+  TEXT = "text",
   TAG = "tag",
 }
