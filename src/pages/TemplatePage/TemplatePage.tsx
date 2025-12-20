@@ -5,6 +5,7 @@ import {
   Splitter,
   SplitterLine,
   Header,
+  Footer,
 } from "./TemplatePage.styled";
 import type { ITemplatePage } from "./types";
 
@@ -14,7 +15,7 @@ const TemplatePage = ({ sideContent, mainContent }: ITemplatePage) => {
       <SideContent>
         <Header>{sideContent?.header && <>{sideContent.header}</>}</Header>
         {sideContent?.content && <>{sideContent.content}</>}
-        {sideContent?.footer && <>{sideContent.footer}</>}
+        {sideContent?.footer && <Footer>{sideContent.footer}</Footer>}
       </SideContent>
 
       <Splitter>
@@ -26,7 +27,7 @@ const TemplatePage = ({ sideContent, mainContent }: ITemplatePage) => {
       <MainContent>
         <Header>{mainContent?.header && <>{mainContent.header}</>}</Header>
         {mainContent?.content && <>{mainContent.content}</>}
-        {mainContent?.footer && <>{mainContent.footer}</>}
+        {mainContent?.footer && <Footer>{mainContent.footer}</Footer>}
       </MainContent>
     </PageWrapper>
   );

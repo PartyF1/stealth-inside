@@ -8,7 +8,13 @@ export const defaultTheme = {
     // АКЦЕНТ (ACCENT)
     accent: "#F3E5A1FF", // Бледно-желтый/кремовый акцент
     accentDisabled: "#F3E5A180", // Бледно-желтый/кремовый акцент (disabled)
+    white: "#FFFFFF",
     // ТЕКСТ ЦВЕТ (TEXT COLOR)
+    input: {
+      default: "#FFFFFF99",
+      fullOpacity: "#FFFFFF00",
+      hover: "#5E5E5E0F",
+    },
     text: {
       // Текст на белом фоне
       onLight: {
@@ -21,6 +27,7 @@ export const defaultTheme = {
         secondary: "#9B9B9B", // Текст на черном фоне второго порядка (средне-серый)
       },
     },
+    error: "#D32F2F", // Красный цвет для ошибок
   },
 } as const;
 

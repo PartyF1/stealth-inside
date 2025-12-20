@@ -1,4 +1,4 @@
 export interface IDefaultContentProps {
-  title: string;
+  title?: string;
   children?: React.ReactNode;
 }
