@@ -14,8 +14,11 @@ export const SideContent = styled.aside`
 
 export const MainContent = styled.main`
   width: 60%;
-  padding: 94px;
+  height: 100%;
+  padding: 0px 94px;
   display: flex;
+  justify-content: space-between;
+  gap: 30px;
   flex-direction: column;
 `;
 
