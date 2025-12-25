@@ -1,7 +1,6 @@
 import { Dimension } from "../../../../../shared/types/enums";
 import { Button, ButtonType } from "../../../../../shared/ui/Button";
 import type { IStepData } from "../types";
-import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.styled";
 import { DefaultContent } from "../../../../../components/DefaultContent";
 import { Select } from "../../../../../shared/ui/Select";
 import type { ISelectOption } from "../../../../../shared/ui/Select";
@@ -11,6 +10,7 @@ import {
 } from "../../../../../shared/constants.ts/business";
 import { useState } from "react";
 import { Input } from "../../../../../shared/ui/Input";
+import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.styled";
 
 interface IFirstOrderForm {
   checkTarget?: ISelectOption;
@@ -31,6 +31,7 @@ export const useFirstOrder = ({ form }: Partial<IStepData>) => {
   };
 
   return {
+    header: <></>,
     content: (
       <DefaultContent>
         <Select
@@ -59,7 +60,6 @@ export const useFirstOrder = ({ form }: Partial<IStepData>) => {
         />
       </DefaultContent>
     ),
-
     footer: (
       <ButtonContainer>
         <Button

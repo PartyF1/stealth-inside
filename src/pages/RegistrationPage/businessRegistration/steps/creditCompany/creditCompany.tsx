@@ -3,7 +3,7 @@ import { Button, ButtonType } from "../../../../../shared/ui/Button";
 import type { IStepData } from "../types";
 import { BUSINESS_STEPS } from "../../../../../shared/types/enums";
 import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.styled";
-import { DefaultForm } from "../../../../../shared/ui/Form/DefaultForm";
+import { DefaultForm } from "../../../../../components/Form/DefaultForm";
 import { creditCompany } from "./dataField";
 
 export const useCreditCompany = ({ onChange, form }: IStepData) => {
@@ -15,10 +15,10 @@ export const useCreditCompany = ({ onChange, form }: IStepData) => {
   };
 
   return {
+    header: <></>,
     content: (
       <DefaultForm onChange={onChange} formData={creditCompany} form={form} />
     ),
-
     footer: (
       <ButtonContainer>
         <Button

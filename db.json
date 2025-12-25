@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "business@gmail.com",
+      "password": "123",
+      "type": "business",
+      "token": "123token",
+      "name": "",
+      "details": {
+        "scopeOfActivity": "",
+        "region": "",
+        "contacts": "",
+        "egrulExtractNumber": "",
+        "registrationCertificateNumber": "",
+        "inn": "",
+        "powerOfAttorney": ""
+      }
+    }
+  ],
+  "chats": [
+    {
+      "id": "234",
+      "user": {
+        "name": "Вася Пупкин",
+        "status": "online"
+      },
+      "messages": [
+        {
+          "text": "1252435",
+          "time": "25.12.2025",
+          "userId": "0"
+        },
+        {
+          "text": "3445",
+          "time": "25.12.2025",
+          "userId": "0"
+        },
+        {
+          "text": "3445",
+          "time": "25.12.2025",
+          "userId": "0"
+        },
+        {
+          "text": "21",
+          "time": "25.12.2025",
+          "userId": "0"
+        },
+        {
+          "text": "23",
+          "time": "25.12.2025",
+          "userId": "0"
+        },
+        {
+          "text": "2354",
+          "time": "26.12.2025",
+          "userId": "0"
+        }
+      ]
+    }
+  ]
+}

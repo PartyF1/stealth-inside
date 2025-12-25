@@ -9,9 +9,20 @@ interface SideMenuElement {
 interface SideMenuProps {
   elements?: SideMenuElement[];
   activeElement?: string;
+  indexed?: boolean;
+  clickable?: boolean;
+  onClick?: (id: string) => void;
+  size?: string;
 }
 
-export const SideMenu = ({ elements, activeElement }: SideMenuProps) => {
+export const SideMenu = ({
+  elements,
+  activeElement,
+  indexed,
+  clickable,
+  onClick,
+  size,
+}: SideMenuProps) => {
   return (
     <StyledSideMenu>
       {elements?.map(
@@ -19,8 +30,13 @@ export const SideMenu = ({ elements, activeElement }: SideMenuProps) => {
           <MenuElement
             key={element.id}
             title={element.title}
-            index={index + 1}
+            number={index + 1}
+            id={element.id}
             isActive={activeElement === element.id}
+            indexed={indexed}
+            clickable={clickable}
+            onClick={onClick}
+            size={size}
           />
         ),
         []

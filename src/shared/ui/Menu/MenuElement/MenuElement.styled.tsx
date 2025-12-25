@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ clickable: boolean; size?: string }>`
   display: flex;
   width: 100%;
-  height: 219px;
+  height: ${({ size }) => (size === "m" ? "100px" : "219px")};
   flex-direction: row;
   border-top: 1px solid ${({ theme }) => theme.colors.text.onLight.secondary};
   align-items: center;
+  ${({ clickable }) => clickable && "cursor: pointer"}
 `;
 
 export const IndexContainer = styled.div<{ isActive: boolean }>`

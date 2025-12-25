@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { defaultTheme, type ThemeType } from "../../shared/theme/theme";
+import { defaultTheme, type ThemeType } from "../../../shared/theme/theme";
 
 interface ThemeProviderProps {
   children: ReactNode;

@@ -3,7 +3,7 @@ import { Button, ButtonType } from "../../../../../shared/ui/Button";
 import type { IStepData } from "../types";
 import { BUSINESS_STEPS } from "../../../../../shared/types/enums";
 import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.styled";
-import { DefaultForm } from "../../../../../shared/ui/Form/DefaultForm";
+import { DefaultForm } from "../../../../../components/Form/DefaultForm";
 import { companyData, personalData } from "./dataField";
 import { useState } from "react";
 
@@ -26,6 +26,7 @@ export const usePersonalData = ({ onChange, form }: IStepData) => {
   };
 
   return {
+    header: <></>,
     content: (
       <DefaultForm
         onChange={onChange}

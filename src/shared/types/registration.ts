@@ -1,17 +1,18 @@
 import type { BUSINESS_STEPS } from "./enums";
+import type { UserType } from "./user";
 
-export interface IRegistrationData {
+export interface IBusinessRegistrationData {
+  type: UserType;
   email: string;
   password: string;
   approvePassword: string;
-  companyName: string;
+  name: string;
   scopeOfActivity: string;
   region: string;
   contacts: string;
-  // Данные для аккредитации компании
-  egrulExtractNumber: string; // Номер выписки ЕГРЮЛ
-  registrationCertificateNumber: string; // Номер свидетельства о регистрации
-  inn: string; // ИНН
-  powerOfAttorney: string; // Доверенность
+  egrulExtractNumber: string;
+  registrationCertificateNumber: string;
+  inn: string;
+  powerOfAttorney: string;
   currentStep: BUSINESS_STEPS;
 }

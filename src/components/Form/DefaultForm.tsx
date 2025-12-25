@@ -1,6 +1,6 @@
-import { DefaultContent } from "../../../components/DefaultContent";
-import type { IFormData } from "../../types/formData";
-import { Input } from "../Input";
+import { DefaultContent } from "../DefaultContent";
+import type { IFormData } from "../../shared/types/formData";
+import { Input } from "../../shared/ui/Input";
 
 export interface IDefaultFormProps<T> {
   formData: IFormData;
