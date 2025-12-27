@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Input } from "../../shared/ui/Input";
 import { SideMenu } from "../../shared/ui/Menu";
-import { useEffect } from "react";
-import { getOrders } from "../../pages/ChatPage/service/ChatService";
+import { ChatPreview } from "./ChatsList.styled";
+import { UserName, UserStatus } from "../Chat/Chat.styled";
 
 export interface IChatsListProps {
   chats: any[];
@@ -18,6 +18,13 @@ export const useChatsList = ({
   const navigate = useNavigate();
   const { chatId } = useParams();
 
+  const renderChatInfo = (chat: any) => (
+    <ChatPreview>
+      <UserName>{chat?.user?.name ?? ""}</UserName>
+      <UserStatus>{chat?.user?.status ?? ""}</UserStatus>
+    </ChatPreview>
+  );
+
   return {
     header: (
       <Input onChange={searchChat} value={currentSearch} placeholder="Поиск" />
@@ -30,6 +37,7 @@ export const useChatsList = ({
         activeElement={chatId}
         onClick={(id) => navigate(`/orders/${id}`)}
         size={"m"}
+        renderContent={renderChatInfo}
       />
     ),
   };

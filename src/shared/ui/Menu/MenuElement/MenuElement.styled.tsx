@@ -31,8 +31,10 @@ export const Index = styled.span`
   transform: rotate(-90deg);
 `;
 
-export const Title = styled.div<{ isActive: boolean }>`
-  padding-left: 30px;
+export const Title = styled.div<{ isActive?: boolean }>`
+  text-transform: uppercase;
+  padding: 0px 30px;
+  width: 100%;
   align-items: center;
   font-style: normal;
   font-weight: 400;

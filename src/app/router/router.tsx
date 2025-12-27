@@ -9,6 +9,7 @@ const AuthentificationPage = lazy(() => import("../../pages/AuthPage"));
 const MainPage = lazy(() => import("../../pages/MainPage"));
 const ChatPage = lazy(() => import("../../pages/ChatPage"));
 const CurrentChat = lazy(() => import("../../pages/ChatPage/CurrentChat"));
+const OfferPage = lazy(() => import("../../pages/MainPage/Offer"));
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: "/offers",
         element: <MainPage />,
+      },
+      {
+        path: "/offers/:offerId",
+        element: <OfferPage />,
       },
       {
         path: "/orders",

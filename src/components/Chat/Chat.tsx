@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   HeaderContainer,
   UserName,
@@ -11,6 +11,7 @@ import {
   InputField,
   SendButton,
 } from "./Chat.styled";
+import { useUser } from "../../app/providers/UserProvider/context";
 
 interface UserInfo {
   name: string;
@@ -21,7 +22,7 @@ export interface Message {
   id: string;
   text: string;
   time: string; // Формат: "12:16"
-  fromMe: boolean; // true — если сообщение наше
+  userId: string;
   color?: string; // Для кастомного цвета фона (опционально)
 }
 
@@ -33,6 +34,7 @@ interface ChatProps {
 
 export const useChat = ({ user, messages, onSend }: ChatProps) => {
   const [input, setInput] = useState("");
+  const { user: currentUser } = useUser();
   const handleSend = () => {
     if (input.trim()) {
       onSend(input);
@@ -52,11 +54,11 @@ export const useChat = ({ user, messages, onSend }: ChatProps) => {
         {messages?.map((msg) => (
           <MessageBubble
             key={msg.id}
-            fromMe={msg.fromMe}
+            fromMe={msg.userId === currentUser?.id}
             style={msg.color ? { background: msg.color } : {}}
           >
             <MessageText>{msg.text}</MessageText>
-            <MessageMeta fromMe={msg.fromMe}>
+            <MessageMeta fromMe={msg.userId === currentUser?.id}>
               <span>{msg.time}</span>
             </MessageMeta>
           </MessageBubble>

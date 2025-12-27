@@ -1,0 +1,22 @@
+import api from "../../../shared/lib/axios";
+
+export const getOffers = async (type: string) => {
+  const response = await api.get("/offers", {
+    params: {
+      _embed: "user",
+      "user.type": type,
+    },
+  });
+
+  return response.data;
+};
+
+export const getOfferData = async (offerId: string) => {
+  const response = await api.get(`/offers/${offerId}`, {
+    params: {
+      _embed: "user",
+    },
+  });
+
+  return response.data;
+};

@@ -10,7 +10,7 @@ export const OfferContainer = styled.div`
   }
 `;
 
-export const DetailsContainer = styled.div`
+export const InformationContainer = styled.div`
   padding-right: 34px;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,16 @@ export const DetailsContainer = styled.div`
   height: 100%;
 `;
 
+export const DetailsContainer = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Detail = styled.span`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;

@@ -1,23 +1,29 @@
 import { memo, useEffect, useState } from "react";
-import { useChat, type Message } from "../../../components/Chat/Chat";
+import { useChat } from "../../../components/Chat/Chat";
 import { useParams } from "react-router-dom";
 import { getMessages, newMessage } from "../service/ChatService";
-import api from "../../../shared/lib/axios";
+import { useUser } from "../../../app/providers/UserProvider/context";
 
 const CurrentChat = memo(() => {
   const { chatId } = useParams();
   const [chatData, setChatData] = useState({});
+  const { user } = useUser();
   const handleSendMessage = async (msg: string) => {
-    const response = await newMessage(
-      {
-        text: msg,
-        time: new Date().toLocaleDateString(),
-        userId: "0",
-      },
-      chatId ?? ""
-    );
+    if (user && chatId)
+      try {
+        await newMessage(
+          {
+            text: msg,
+            time: new Date().toLocaleDateString(),
+            userId: user?.id,
+          },
+          chatId
+        );
 
-    refreshChat();
+        refreshChat();
+      } catch (e) {
+        console.error(e);
+      }
   };
 
   const refreshChat = async () => {

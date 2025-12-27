@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { MenuElement } from "./MenuElement/MenuElement";
 import { StyledSideMenu } from "./SideMenu.styled";
 
@@ -13,6 +14,7 @@ interface SideMenuProps {
   clickable?: boolean;
   onClick?: (id: string) => void;
   size?: string;
+  renderContent?: (elementProps: unknown) => ReactNode;
 }
 
 export const SideMenu = ({
@@ -22,7 +24,9 @@ export const SideMenu = ({
   clickable,
   onClick,
   size,
+  renderContent,
 }: SideMenuProps) => {
+  console.log(elements);
   return (
     <StyledSideMenu>
       {elements?.map(
@@ -37,6 +41,7 @@ export const SideMenu = ({
             clickable={clickable}
             onClick={onClick}
             size={size}
+            renderContent={renderContent?.(element)}
           />
         ),
         []

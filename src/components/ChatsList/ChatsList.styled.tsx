@@ -1,3 +1,8 @@
 import styled from "styled-components";
 
-export const ChatItem = styled.div<{ isActive: boolean }>``;
+export const ChatPreview = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;

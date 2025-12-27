@@ -6,7 +6,8 @@
       "password": "123",
       "type": "business",
       "token": "123token",
-      "name": "",
+      "name": "ООО \"Агроторг\"",
+      "status": "online",
       "details": {
         "scopeOfActivity": "",
         "region": "",
@@ -16,47 +17,139 @@
         "inn": "",
         "powerOfAttorney": ""
       }
+    },
+    {
+      "id": "2",
+      "email": "mystery_shopper@gmail.com",
+      "password": "123",
+      "type": "mystery_shopper",
+      "token": "123token",
+      "name": "Вася Пупкин",
+      "status": "online",
+      "details": {}
+    }
+  ],
+  "offers": [
+    {
+      "id": "0123",
+      "name": "ПРОВЕРКА АПТЕКИ",
+      "userId": "1",
+      "details": {
+        "description": {
+          "title": "Описание",
+          "value": "Требуется тайный покупатель Требуется тайный покупатель Требуется тайный покупатель Требуется тайный покупатель Требуется тайный покупатель Требуется тайный покупатель"
+        },
+        "conditions": {
+          "title": "Условия",
+          "value": "Частичная занятость"
+        },
+        "location": {
+          "title": "Расположение",
+          "value": "г. Сарапул, ул. Вишнёвая, 11"
+        },
+        "cost": {
+          "title": "Оплата",
+          "value": "договорная"
+        }
+      }
     }
   ],
   "chats": [
     {
       "id": "234",
-      "user": {
-        "name": "Вася Пупкин",
-        "status": "online"
-      },
-      "messages": [
-        {
-          "text": "1252435",
-          "time": "25.12.2025",
-          "userId": "0"
-        },
-        {
-          "text": "3445",
-          "time": "25.12.2025",
-          "userId": "0"
-        },
-        {
-          "text": "3445",
-          "time": "25.12.2025",
-          "userId": "0"
-        },
-        {
-          "text": "21",
-          "time": "25.12.2025",
-          "userId": "0"
-        },
-        {
-          "text": "23",
-          "time": "25.12.2025",
-          "userId": "0"
-        },
-        {
-          "text": "2354",
-          "time": "26.12.2025",
-          "userId": "0"
-        }
-      ]
+      "mystery_shopper": "2",
+      "business": "1"
+    },
+    {
+      "id": "235",
+      "mystery_shopper": "3",
+      "business": "4"
     }
-  ]
+  ],
+  "messages": [
+    {
+      "text": "1252435",
+      "time": "25.12.2025",
+      "userId": "0",
+      "chatId": "234"
+    },
+    {
+      "text": "3445",
+      "time": "25.12.2025",
+      "userId": "0",
+      "chatId": "234"
+    },
+    {
+      "text": "3445",
+      "time": "25.12.2025",
+      "userId": "0",
+      "chatId": "234"
+    },
+    {
+      "text": "21",
+      "time": "25.12.2025",
+      "userId": "0",
+      "chatId": "234"
+    },
+    {
+      "text": "23",
+      "time": "25.12.2025",
+      "userId": "0",
+      "chatId": "234"
+    },
+    {
+      "text": "2354",
+      "time": "26.12.2025",
+      "userId": "0",
+      "chatId": "234"
+    },
+    {
+      "text": "234",
+      "time": "27.12.2025",
+      "userId": "1",
+      "chatId": "234"
+    },
+    {
+      "text": "Я вас категорически приветствую, дорогой друг, чем могу вам помочь?",
+      "time": "27.12.2025",
+      "userId": "1",
+      "chatId": "234"
+    },
+    {
+      "id": "22b9",
+      "text": "Это снова я",
+      "time": "27.12.2025",
+      "userId": "1",
+      "chatId": "234"
+    },
+    {
+      "id": "580f",
+      "text": "Хай, чат работает?",
+      "time": "28.12.2025",
+      "userId": "2",
+      "chatId": "234"
+    },
+    {
+      "id": "6a41",
+      "text": "Охуеть",
+      "time": "28.12.2025",
+      "userId": "1",
+      "chatId": "234"
+    },
+    {
+      "id": "8485",
+      "text": "ПРИВ",
+      "time": "28.12.2025",
+      "userId": "1",
+      "chatId": "234"
+    },
+    {
+      "id": "54ac",
+      "text": "лллл",
+      "time": "28.12.2025",
+      "userId": "1",
+      "chatId": "234"
+    }
+  ],
+  "reports": []
 }

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Container, Index, IndexContainer, Title } from "./MenuElement.styled";
 
 export interface IMenuElement {
@@ -9,6 +10,7 @@ export interface IMenuElement {
   clickable?: boolean;
   size?: string;
   onClick?: (id: string) => void;
+  renderContent?: ReactNode;
 }
 
 export const MenuElement = ({
@@ -20,13 +22,14 @@ export const MenuElement = ({
   clickable = false,
   size,
   onClick,
+  renderContent,
 }: IMenuElement) => {
   return (
     <Container clickable={clickable} size={size} onClick={() => onClick?.(id)}>
       <IndexContainer isActive={isActive}>
         {indexed && <Index>{`(${number})`}</Index>}
       </IndexContainer>
-      <Title isActive={isActive}>{title}</Title>
+      <Title isActive={isActive}>{renderContent ?? title}</Title>
     </Container>
   );
 };

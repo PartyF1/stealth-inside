@@ -1,15 +1,16 @@
 import { Offer } from "./Offer/Offer";
 import { ListContainer } from "./OfferList.styled";
 
-interface IOfferElement {
+export interface IOfferElement {
   id: string;
   name: string;
-  details: Record<string, string | number | undefined>;
+  user: Record<string, any>;
+  details: Record<string, { title: string; value: string }>;
 }
 
 interface IOfferListProps {
   offers: IOfferElement[];
-  onSelect?: (value: string) => {};
+  onSelect?: (value: string) => void;
 }
 
 export const OfferList = ({ offers, onSelect }: IOfferListProps) => {
