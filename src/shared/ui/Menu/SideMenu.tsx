@@ -26,7 +26,6 @@ export const SideMenu = ({
   size,
   renderContent,
 }: SideMenuProps) => {
-  console.log(elements);
   return (
     <StyledSideMenu>
       {elements?.map(

@@ -6,10 +6,14 @@ import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.sty
 import { DefaultForm } from "../../../../../components/Form/DefaultForm";
 import { companyData, personalData } from "./dataField";
 import { useState } from "react";
+import type { IBusinessRegistrationData } from "../../../../../shared/types/registration";
 
 type Stage = "user" | "business";
 
-export const usePersonalData = ({ onChange, form }: IStepData) => {
+export const usePersonalData = ({
+  onChange,
+  form,
+}: IStepData<IBusinessRegistrationData>) => {
   const [stage, setStage] = useState<Stage>("user");
 
   const handleOnClick = () => {

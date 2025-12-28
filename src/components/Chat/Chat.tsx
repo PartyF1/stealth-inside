@@ -10,8 +10,13 @@ import {
   FooterContainer,
   InputField,
   SendButton,
+  UserContainer,
 } from "./Chat.styled";
 import { useUser } from "../../app/providers/UserProvider/context";
+import { Button } from "../../shared/ui/Button";
+import { UserType } from "../../shared/types/user";
+import { useNavigate, useParams } from "react-router-dom";
+import type { IReport } from "../../shared/types/report";
 
 interface UserInfo {
   name: string;
@@ -29,12 +34,15 @@ export interface Message {
 interface ChatProps {
   user?: UserInfo;
   messages?: Message[];
+  report?: IReport;
   onSend: (msg: string) => void;
 }
 
-export const useChat = ({ user, messages, onSend }: ChatProps) => {
+export const useChat = ({ user, messages, report, onSend }: ChatProps) => {
   const [input, setInput] = useState("");
   const { user: currentUser } = useUser();
+  const { chatId } = useParams();
+  const navigate = useNavigate();
   const handleSend = () => {
     if (input.trim()) {
       onSend(input);
@@ -45,8 +53,20 @@ export const useChat = ({ user, messages, onSend }: ChatProps) => {
   return {
     header: (
       <HeaderContainer>
-        <UserName>{user?.name}</UserName>
-        <UserStatus>{user?.status}</UserStatus>
+        <UserContainer>
+          <UserName>{user?.name}</UserName>
+          <UserStatus>{user?.status}</UserStatus>
+        </UserContainer>
+        {report?.id && currentUser?.type === UserType.BUSINESS && (
+          <Button onClick={() => navigate(`/reports/${report.id}`)}>
+            ПОСМОТРЕТЬ ОТЧЁТ
+          </Button>
+        )}
+        {!report?.id && currentUser?.type === UserType.MYSTERY_SHOPPER && (
+          <Button onClick={() => navigate(`/orders/${chatId}/report`)}>
+            СОСТАВИТЬ ОТЧЁТ
+          </Button>
+        )}
       </HeaderContainer>
     ),
     content: (

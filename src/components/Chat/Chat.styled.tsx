@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   padding-top: 34px;
   display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const UserContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
 `;

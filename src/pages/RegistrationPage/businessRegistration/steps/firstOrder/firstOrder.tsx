@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import { Input } from "../../../../../shared/ui/Input";
 import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.styled";
+import type { IBusinessRegistrationData } from "../../../../../shared/types/registration";
 
 interface IFirstOrderForm {
   checkTarget?: ISelectOption;
@@ -19,7 +20,9 @@ interface IFirstOrderForm {
   details?: string;
 }
 
-export const useFirstOrder = ({ form }: Partial<IStepData>) => {
+export const useFirstOrder = ({
+  form,
+}: Partial<IStepData<IBusinessRegistrationData>>) => {
   const [orderForm, setOrderForm] = useState<IFirstOrderForm>({});
   const handleOnClick = () => {};
 

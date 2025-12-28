@@ -4,7 +4,7 @@ export const getOffers = async (type: string) => {
   const response = await api.get("/offers", {
     params: {
       _embed: "user",
-      "user.type": type,
+      "user.type_ne": type,
     },
   });
 

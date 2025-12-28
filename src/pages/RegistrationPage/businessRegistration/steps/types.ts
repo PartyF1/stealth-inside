@@ -1,6 +1,4 @@
-import type { IRegistrationData } from "../../../../shared/types/registration";
-
-export interface IStepData {
-  onChange: (value: IRegistrationData) => void;
-  form: IRegistrationData;
+export interface IStepData<T> {
+  onChange: (value: T) => void;
+  form: T;
 }

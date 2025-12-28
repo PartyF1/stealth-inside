@@ -21,3 +21,9 @@ export enum BUSINESS_STEPS {
   CREDIT_COMPANY = "creditCompany",
   FIRST_ORDER = "firstOrder",
 }
+
+export enum REPORT_STEPS {
+  MAIN_INFO = "mainInfo",
+  SERVICE_QUALITY = "serviceQuality",
+  GENERAL_IMPRESSIONS = "generalImpressions",
+}

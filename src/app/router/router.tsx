@@ -10,6 +10,7 @@ const MainPage = lazy(() => import("../../pages/MainPage"));
 const ChatPage = lazy(() => import("../../pages/ChatPage"));
 const CurrentChat = lazy(() => import("../../pages/ChatPage/CurrentChat"));
 const OfferPage = lazy(() => import("../../pages/MainPage/Offer"));
+const ReportPage = lazy(() => import("../../pages/ReportPage"));
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,14 @@ export const router = createBrowserRouter([
             element: <CurrentChat />,
           },
         ],
+      },
+      {
+        path: "/orders/:chatId/report",
+        element: <ReportPage />,
+      },
+      {
+        path: "/reports/:reportId",
+        element: <ReportPage />,
       },
     ],
   },

@@ -71,49 +71,57 @@
       "text": "1252435",
       "time": "25.12.2025",
       "userId": "0",
-      "chatId": "234"
+      "chatId": "234",
+      "id": "8eaa"
     },
     {
       "text": "3445",
       "time": "25.12.2025",
       "userId": "0",
-      "chatId": "234"
+      "chatId": "234",
+      "id": "4c35"
     },
     {
       "text": "3445",
       "time": "25.12.2025",
       "userId": "0",
-      "chatId": "234"
+      "chatId": "234",
+      "id": "cce7"
     },
     {
       "text": "21",
       "time": "25.12.2025",
       "userId": "0",
-      "chatId": "234"
+      "chatId": "234",
+      "id": "782d"
     },
     {
       "text": "23",
       "time": "25.12.2025",
       "userId": "0",
-      "chatId": "234"
+      "chatId": "234",
+      "id": "0e79"
     },
     {
       "text": "2354",
       "time": "26.12.2025",
       "userId": "0",
-      "chatId": "234"
+      "chatId": "234",
+      "id": "d3fa"
     },
     {
       "text": "234",
       "time": "27.12.2025",
       "userId": "1",
-      "chatId": "234"
+      "chatId": "234",
+      "id": "4f4e"
     },
     {
       "text": "Я вас категорически приветствую, дорогой друг, чем могу вам помочь?",
       "time": "27.12.2025",
       "userId": "1",
-      "chatId": "234"
+      "chatId": "234",
+      "id": "1d61"
     },
     {
       "id": "22b9",
@@ -149,7 +157,37 @@
       "time": "28.12.2025",
       "userId": "1",
       "chatId": "234"
+    },
+    {
+      "id": "f015",
+      "text": "И вам здравствуйте",
+      "time": "29.12.2025",
+      "userId": "2",
+      "chatId": "234"
     }
   ],
-  "reports": []
+  "reports": [
+    {
+      "id": "17d0",
+      "chatId": "234",
+      "date": "13.06.2025",
+      "employees": "5",
+      "appearance": "Опрятный",
+      "greetings": "8",
+      "initiative": "Да, помог разобраться со сложностями",
+      "politeness": "10",
+      "observations": "Всё понравилось"
+    },
+    {
+      "id": "7e4a",
+      "chatId": "234",
+      "date": "13.06.2025",
+      "employees": "5",
+      "appearance": "Опрятный",
+      "greetings": "8",
+      "initiative": "Да, помог разобраться со сложностями",
+      "politeness": "10",
+      "observations": "Всё понравилось"
+    }
+  ]
 }

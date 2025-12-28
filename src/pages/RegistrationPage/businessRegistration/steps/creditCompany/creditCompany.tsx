@@ -5,8 +5,12 @@ import { BUSINESS_STEPS } from "../../../../../shared/types/enums";
 import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.styled";
 import { DefaultForm } from "../../../../../components/Form/DefaultForm";
 import { creditCompany } from "./dataField";
+import type { IBusinessRegistrationData } from "../../../../../shared/types/registration";
 
-export const useCreditCompany = ({ onChange, form }: IStepData) => {
+export const useCreditCompany = ({
+  onChange,
+  form,
+}: IStepData<IBusinessRegistrationData>) => {
   const handleOnClick = () => {
     onChange({
       ...form,

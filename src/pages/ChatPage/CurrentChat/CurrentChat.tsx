@@ -3,6 +3,7 @@ import { useChat } from "../../../components/Chat/Chat";
 import { useParams } from "react-router-dom";
 import { getMessages, newMessage } from "../service/ChatService";
 import { useUser } from "../../../app/providers/UserProvider/context";
+import { getReportByChatId } from "../../ReportPage/service/ReportService";
 
 const CurrentChat = memo(() => {
   const { chatId } = useParams();
@@ -30,7 +31,8 @@ const CurrentChat = memo(() => {
     if (chatId) {
       try {
         const response = await getMessages(chatId);
-        setChatData(response?.data);
+        const report = await getReportByChatId(chatId);
+        setChatData({ ...response?.data, report: report?.data?.[0] });
       } catch (e) {
         console.error(e);
       }

@@ -25,6 +25,7 @@ export const DefaultForm = <T,>({
       {formData.fields.map((field) => (
         <Input
           key={field.key}
+          title={field.title ?? ""}
           onChange={(value) => handleOnChange(value, field.key)}
           value={String((form as Record<string, unknown>)?.[field.key] ?? "")}
           placeholder={field.label}
