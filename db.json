@@ -1,193 +1,292 @@
 {
   "users": [
     {
-      "id": "1",
-      "email": "business@gmail.com",
+      "id": "4786",
+      "type": "mystery_shopper",
+      "email": "mystery_shopper@gmail.com",
       "password": "123",
-      "type": "business",
-      "token": "123token",
-      "name": "ООО \"Агроторг\"",
-      "status": "online",
+      "name": "Даниил ",
+      "token": "testToken",
       "details": {
-        "scopeOfActivity": "",
-        "region": "",
-        "contacts": "",
-        "egrulExtractNumber": "",
-        "registrationCertificateNumber": "",
-        "inn": "",
-        "powerOfAttorney": ""
+        "location": "Выхухоль",
+        "birthDate": "10.12.2022"
       }
     },
     {
-      "id": "2",
+      "id": "2b1b",
+      "type": "mystery_shopper",
       "email": "mystery_shopper@gmail.com",
       "password": "123",
-      "type": "mystery_shopper",
-      "token": "123token",
-      "name": "Вася Пупкин",
-      "status": "online",
-      "details": {}
+      "name": "Даниил ",
+      "token": "testToken",
+      "details": {
+        "location": "Выхухоль",
+        "birthDate": "10.12.2022"
+      }
+    },
+    {
+      "id": "1d79",
+      "type": "business",
+      "email": "business@gmail.com",
+      "password": "123",
+      "name": "ООО \"Кринж\"",
+      "token": "testToken",
+      "details": {
+        "scopeOfActivity": "IT",
+        "region": "Выхухоль",
+        "contacts": "79999999999",
+        "egrulExtractNumber": "123",
+        "registrationCertificateNumber": "123",
+        "inn": "123",
+        "powerOfAttorney": "321"
+      }
+    },
+    {
+      "id": "44d1",
+      "type": "business",
+      "email": "business@gmail.com",
+      "password": "123",
+      "name": "ООО \"Кринж\"",
+      "token": "testToken",
+      "details": {
+        "scopeOfActivity": "IT",
+        "region": "Выхухоль",
+        "contacts": "79999999999",
+        "egrulExtractNumber": "123",
+        "registrationCertificateNumber": "123",
+        "inn": "123",
+        "powerOfAttorney": "321"
+      }
+    },
+    {
+      "id": "beca",
+      "type": "business",
+      "email": "business@gmail.com",
+      "password": "123",
+      "name": "ООО \"Кринж\"",
+      "token": "testToken",
+      "details": {
+        "id": "1d79",
+        "token": "testToken",
+        "details": {
+          "scopeOfActivity": "IT",
+          "region": "Выхухоль",
+          "contacts": "79999999999",
+          "egrulExtractNumber": "123",
+          "registrationCertificateNumber": "123",
+          "inn": "123",
+          "powerOfAttorney": "321"
+        }
+      }
+    },
+    {
+      "id": "1ecf",
+      "type": "business",
+      "email": "business@gmail.com",
+      "password": "123",
+      "name": "ООО \"Кринж\"",
+      "token": "testToken",
+      "details": {
+        "id": "1d79",
+        "token": "testToken",
+        "details": {
+          "scopeOfActivity": "IT",
+          "region": "Выхухоль",
+          "contacts": "79999999999",
+          "egrulExtractNumber": "123",
+          "registrationCertificateNumber": "123",
+          "inn": "123",
+          "powerOfAttorney": "321"
+        }
+      }
+    },
+    {
+      "id": "eb10",
+      "type": "business",
+      "email": "negr",
+      "password": "negr",
+      "name": "negr",
+      "token": "testToken",
+      "details": {
+        "scopeOfActivity": "negr",
+        "region": "negr",
+        "contacts": "negr",
+        "egrulExtractNumber": "negr",
+        "registrationCertificateNumber": "negr",
+        "inn": "negr",
+        "powerOfAttorney": "negr"
+      }
+    },
+    {
+      "id": "3175",
+      "type": "business",
+      "email": "negr",
+      "password": "negr",
+      "name": "negr",
+      "token": "testToken",
+      "details": {
+        "scopeOfActivity": "negr",
+        "region": "negr",
+        "contacts": "negr",
+        "egrulExtractNumber": "negr",
+        "registrationCertificateNumber": "negr",
+        "inn": "negr",
+        "powerOfAttorney": "negr"
+      }
     }
   ],
   "offers": [
     {
-      "id": "0123",
-      "name": "ПРОВЕРКА АПТЕКИ",
-      "userId": "1",
+      "id": "a68e",
+      "name": "Проверить пиво",
+      "userId": "1d79",
       "details": {
         "description": {
           "title": "Описание",
-          "value": "Требуется тайный покупатель Требуется тайный покупатель Требуется тайный покупатель Требуется тайный покупатель Требуется тайный покупатель Требуется тайный покупатель"
+          "value": "Надо проверить пиво"
         },
         "conditions": {
           "title": "Условия",
-          "value": "Частичная занятость"
+          "value": "Пиво"
         },
         "location": {
           "title": "Расположение",
-          "value": "г. Сарапул, ул. Вишнёвая, 11"
+          "value": "Пивоварня"
         },
         "cost": {
           "title": "Оплата",
-          "value": "договорная"
+          "value": "Банка пива"
+        }
+      }
+    },
+    {
+      "id": "a584",
+      "name": "Проверить пиво",
+      "userId": "1d79",
+      "details": {
+        "description": {
+          "title": "Описание",
+          "value": "Надо проверить пиво"
+        },
+        "conditions": {
+          "title": "Условия",
+          "value": "Пиво"
+        },
+        "location": {
+          "title": "Расположение",
+          "value": "Пивоварня"
+        },
+        "cost": {
+          "title": "Оплата",
+          "value": "Банка пива"
+        }
+      }
+    },
+    {
+      "id": "d98c",
+      "name": "negr",
+      "userId": "3175",
+      "details": {
+        "description": {
+          "title": "Описание",
+          "value": "negr"
+        },
+        "conditions": {
+          "title": "Условия",
+          "value": "negr"
+        },
+        "location": {
+          "title": "Расположение",
+          "value": "negr"
+        },
+        "cost": {
+          "title": "Оплата",
+          "value": "negr"
+        }
+      }
+    },
+    {
+      "id": "2a59",
+      "name": "negr",
+      "userId": "3175",
+      "details": {
+        "description": {
+          "title": "Описание",
+          "value": "negr"
+        },
+        "conditions": {
+          "title": "Условия",
+          "value": "negr"
+        },
+        "location": {
+          "title": "Расположение",
+          "value": "negr"
+        },
+        "cost": {
+          "title": "Оплата",
+          "value": "negr"
+        }
+      }
+    },
+    {
+      "id": "3a18",
+      "userId": "1d79",
+      "details": {
+        "description": {
+          "title": "Описание"
+        },
+        "conditions": {
+          "title": "Условия"
+        },
+        "location": {
+          "title": "Расположение"
+        },
+        "cost": {
+          "title": "Оплата"
+        }
+      }
+    },
+    {
+      "id": "0718",
+      "userId": "1d79",
+      "details": {
+        "description": {
+          "title": "Описание"
+        },
+        "conditions": {
+          "title": "Условия"
+        },
+        "location": {
+          "title": "Расположение"
+        },
+        "cost": {
+          "title": "Оплата"
         }
       }
     }
   ],
-  "chats": [
-    {
-      "id": "234",
-      "mystery_shopper": "2",
-      "business": "1"
-    },
-    {
-      "id": "235",
-      "mystery_shopper": "3",
-      "business": "4"
-    }
-  ],
   "messages": [
     {
-      "text": "1252435",
-      "time": "25.12.2025",
-      "userId": "0",
-      "chatId": "234",
-      "id": "8eaa"
-    },
-    {
-      "text": "3445",
-      "time": "25.12.2025",
-      "userId": "0",
-      "chatId": "234",
-      "id": "4c35"
-    },
-    {
-      "text": "3445",
-      "time": "25.12.2025",
-      "userId": "0",
-      "chatId": "234",
-      "id": "cce7"
-    },
-    {
-      "text": "21",
-      "time": "25.12.2025",
-      "userId": "0",
-      "chatId": "234",
-      "id": "782d"
-    },
-    {
-      "text": "23",
-      "time": "25.12.2025",
-      "userId": "0",
-      "chatId": "234",
-      "id": "0e79"
-    },
-    {
-      "text": "2354",
-      "time": "26.12.2025",
-      "userId": "0",
-      "chatId": "234",
-      "id": "d3fa"
-    },
-    {
-      "text": "234",
-      "time": "27.12.2025",
-      "userId": "1",
-      "chatId": "234",
-      "id": "4f4e"
-    },
-    {
-      "text": "Я вас категорически приветствую, дорогой друг, чем могу вам помочь?",
-      "time": "27.12.2025",
-      "userId": "1",
-      "chatId": "234",
-      "id": "1d61"
-    },
-    {
-      "id": "22b9",
-      "text": "Это снова я",
-      "time": "27.12.2025",
-      "userId": "1",
-      "chatId": "234"
-    },
-    {
-      "id": "580f",
-      "text": "Хай, чат работает?",
-      "time": "28.12.2025",
-      "userId": "2",
-      "chatId": "234"
-    },
-    {
-      "id": "6a41",
-      "text": "Охуеть",
-      "time": "28.12.2025",
-      "userId": "1",
-      "chatId": "234"
-    },
-    {
-      "id": "8485",
-      "text": "ПРИВ",
-      "time": "28.12.2025",
-      "userId": "1",
-      "chatId": "234"
-    },
-    {
-      "id": "54ac",
-      "text": "лллл",
-      "time": "28.12.2025",
-      "userId": "1",
-      "chatId": "234"
-    },
-    {
-      "id": "f015",
-      "text": "И вам здравствуйте",
-      "time": "29.12.2025",
-      "userId": "2",
-      "chatId": "234"
+      "id": "8029",
+      "text": "Нужно проверить пиво. Потому что пиво - это круто.",
+      "time": "31.12.2025",
+      "userId": "4786",
+      "chatId": "54f2"
     }
   ],
-  "reports": [
+  "chats": [
     {
-      "id": "17d0",
-      "chatId": "234",
-      "date": "13.06.2025",
-      "employees": "5",
-      "appearance": "Опрятный",
-      "greetings": "8",
-      "initiative": "Да, помог разобраться со сложностями",
-      "politeness": "10",
-      "observations": "Всё понравилось"
+      "id": "54f2",
+      "offerId": "a68e",
+      "mystery_shopper": "4786",
+      "business": "1d79"
     },
     {
-      "id": "7e4a",
-      "chatId": "234",
-      "date": "13.06.2025",
-      "employees": "5",
-      "appearance": "Опрятный",
-      "greetings": "8",
-      "initiative": "Да, помог разобраться со сложностями",
-      "politeness": "10",
-      "observations": "Всё понравилось"
+      "id": "591e",
+      "offerId": "a68e",
+      "mystery_shopper": "4786",
+      "business": "1d79"
     }
-  ]
+  ],
+  "reports": []
 }

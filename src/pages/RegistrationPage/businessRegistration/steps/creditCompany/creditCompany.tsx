@@ -6,14 +6,16 @@ import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.sty
 import { DefaultForm } from "../../../../../components/Form/DefaultForm";
 import { creditCompany } from "./dataField";
 import type { IBusinessRegistrationData } from "../../../../../shared/types/registration";
+import { registerUser } from "../../../service/RegistrationService";
 
 export const useCreditCompany = ({
   onChange,
   form,
 }: IStepData<IBusinessRegistrationData>) => {
-  const handleOnClick = () => {
+  const handleOnClick = async () => {
+    const response = await registerUser(form);
     onChange({
-      ...form,
+      ...response,
       currentStep: BUSINESS_STEPS.FIRST_ORDER,
     });
   };

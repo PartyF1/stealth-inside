@@ -11,6 +11,8 @@ const ChatPage = lazy(() => import("../../pages/ChatPage"));
 const CurrentChat = lazy(() => import("../../pages/ChatPage/CurrentChat"));
 const OfferPage = lazy(() => import("../../pages/MainPage/Offer"));
 const ReportPage = lazy(() => import("../../pages/ReportPage"));
+const CreateOfferPage = lazy(() => import("../../pages/CreateOfferPage"));
+const ProfilePage = lazy(() => import("../../pages/ProfilePage"));
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ export const router = createBrowserRouter([
   {
     element: <ProtectedRoute />,
     children: [
+      {
+        path: "/profile",
+        element: <ProfilePage />,
+      },
+      {
+        path: "/create-offer",
+        element: <CreateOfferPage />,
+      },
       {
         path: "/offers",
         element: <MainPage />,

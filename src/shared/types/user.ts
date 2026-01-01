@@ -16,6 +16,7 @@ export interface BusinessUserDetails {
 export interface User {
   id: string;
   email: string;
+  password: string;
   type: UserType;
   token: string;
   name: string;

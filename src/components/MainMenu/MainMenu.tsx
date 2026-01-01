@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import {
   CreateOrder,
   Footer,
@@ -12,6 +11,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../shared/ui/Button";
 import { useAuth } from "../../app/providers/AuthProvider/context";
+import { useUser } from "../../app/providers/UserProvider/context";
+import { UserType } from "../../shared/types/user";
 
 interface SideMenuProps {
   isOpen: boolean;
@@ -20,6 +21,7 @@ interface SideMenuProps {
 
 export const SideMenu = ({ isOpen, onClose }: SideMenuProps) => {
   const navigate = useNavigate();
+  const { user } = useUser();
   const { logout } = useAuth();
   return (
     <>
@@ -40,7 +42,11 @@ export const SideMenu = ({ isOpen, onClose }: SideMenuProps) => {
         </MenuList>
 
         <Footer>
-          <CreateOrder>+ Создать заказ</CreateOrder>
+          {user?.type === UserType.BUSINESS && (
+            <CreateOrder onClick={() => navigate("/create-offer")}>
+              + Создать предложение
+            </CreateOrder>
+          )}
         </Footer>
       </Drawer>
     </>

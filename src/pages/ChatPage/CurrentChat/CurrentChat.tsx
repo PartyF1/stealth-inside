@@ -52,7 +52,7 @@ const CurrentChat = memo(() => {
         console.error(e);
       }
     }
-  }, []);
+  }, [chatId]);
 
   return (
     <>

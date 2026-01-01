@@ -23,6 +23,7 @@ export const usePersonalData = ({
         currentStep: BUSINESS_STEPS.CREDIT_COMPANY,
       });
     } else {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       form.approvePassword === form.password
         ? setStage("business")
         : alert("Введённые пароли не совпадают");

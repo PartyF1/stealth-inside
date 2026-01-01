@@ -25,7 +25,7 @@ export const companyData: IFormData = {
   fields: [
     {
       label: "Название компании",
-      key: "companyName",
+      key: "name",
     },
     {
       label: "Сфера деятельности",

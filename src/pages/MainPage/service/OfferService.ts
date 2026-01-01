@@ -20,3 +20,15 @@ export const getOfferData = async (offerId: string) => {
 
   return response.data;
 };
+
+export const createOrder = async (
+  offerId: string,
+  executorId: string,
+  businessId: string
+) => {
+  return await api.post(`/chats`, {
+    offerId,
+    mystery_shopper: executorId,
+    business: businessId,
+  });
+};

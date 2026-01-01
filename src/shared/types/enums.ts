@@ -22,6 +22,12 @@ export enum BUSINESS_STEPS {
   FIRST_ORDER = "firstOrder",
 }
 
+export enum SHOPPER_STEPS {
+  CREATE_ACCOUNT = "createAccount",
+  PERSONAL_INFORMATION = "personalInformation",
+  APPROVE_PERSONALITY = "approvePersonality",
+}
+
 export enum REPORT_STEPS {
   MAIN_INFO = "mainInfo",
   SERVICE_QUALITY = "serviceQuality",
