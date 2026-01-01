@@ -3,13 +3,17 @@ import { Button, ButtonType } from "../../../../../shared/ui/Button";
 import type { IStepData } from "../types";
 import { BUSINESS_STEPS } from "../../../../../shared/types/enums";
 import { ButtonContainer } from "../../../ui/ButtonContainer/ButtonContainer.styled";
-import { DefaultForm } from "../../../../../shared/ui/Form/DefaultForm";
+import { DefaultForm } from "../../../../../components/Form/DefaultForm";
 import { companyData, personalData } from "./dataField";
 import { useState } from "react";
+import type { IBusinessRegistrationData } from "../../../../../shared/types/registration";
 
 type Stage = "user" | "business";
 
-export const usePersonalData = ({ onChange, form }: IStepData) => {
+export const usePersonalData = ({
+  onChange,
+  form,
+}: IStepData<IBusinessRegistrationData>) => {
   const [stage, setStage] = useState<Stage>("user");
 
   const handleOnClick = () => {
@@ -19,6 +23,7 @@ export const usePersonalData = ({ onChange, form }: IStepData) => {
         currentStep: BUSINESS_STEPS.CREDIT_COMPANY,
       });
     } else {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       form.approvePassword === form.password
         ? setStage("business")
         : alert("Введённые пароли не совпадают");
@@ -26,6 +31,7 @@ export const usePersonalData = ({ onChange, form }: IStepData) => {
   };
 
   return {
+    header: <></>,
     content: (
       <DefaultForm
         onChange={onChange}

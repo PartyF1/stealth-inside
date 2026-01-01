@@ -4,29 +4,34 @@ import { DefaultContent } from "../../components/DefaultContent";
 import { Button, ButtonType } from "../../shared/ui/Button";
 import { Actions } from "./WelcomePage.styled";
 import { Dimension } from "../../shared/types/enums";
+import { useNavigate } from "react-router-dom";
 
 const WelcomePage = memo(() => {
+  const navigate = useNavigate();
+
   const mainContent = {
+    header: <></>,
     content: (
       <DefaultContent title="ДОБРО ПОЖАЛОВАТЬ В CHECKMATE">
         <Actions>
           <Button
             dimension={Dimension.WIDE}
             type={ButtonType.PRIMARY}
-            onClick={() => {}}
+            onClick={() => navigate("/login")}
           >
             Войти
           </Button>
           <Button
             dimension={Dimension.WIDE}
             type={ButtonType.SECONDARY}
-            onClick={() => {}}
+            onClick={() => navigate("/registration")}
           >
             Зарегистрироваться
           </Button>
         </Actions>
       </DefaultContent>
     ),
+    footer: <></>,
   };
   return <TemplatePage mainContent={mainContent} />;
 });

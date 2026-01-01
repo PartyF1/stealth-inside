@@ -1,0 +1,292 @@
+{
+  "users": [
+    {
+      "id": "4786",
+      "type": "mystery_shopper",
+      "email": "mystery_shopper@gmail.com",
+      "password": "123",
+      "name": "Даниил ",
+      "token": "testToken",
+      "details": {
+        "location": "Выхухоль",
+        "birthDate": "10.12.2022"
+      }
+    },
+    {
+      "id": "2b1b",
+      "type": "mystery_shopper",
+      "email": "mystery_shopper@gmail.com",
+      "password": "123",
+      "name": "Даниил ",
+      "token": "testToken",
+      "details": {
+        "location": "Выхухоль",
+        "birthDate": "10.12.2022"
+      }
+    },
+    {
+      "id": "1d79",
+      "type": "business",
+      "email": "business@gmail.com",
+      "password": "123",
+      "name": "ООО \"Кринж\"",
+      "token": "testToken",
+      "details": {
+        "scopeOfActivity": "IT",
+        "region": "Выхухоль",
+        "contacts": "79999999999",
+        "egrulExtractNumber": "123",
+        "registrationCertificateNumber": "123",
+        "inn": "123",
+        "powerOfAttorney": "321"
+      }
+    },
+    {
+      "id": "44d1",
+      "type": "business",
+      "email": "business@gmail.com",
+      "password": "123",
+      "name": "ООО \"Кринж\"",
+      "token": "testToken",
+      "details": {
+        "scopeOfActivity": "IT",
+        "region": "Выхухоль",
+        "contacts": "79999999999",
+        "egrulExtractNumber": "123",
+        "registrationCertificateNumber": "123",
+        "inn": "123",
+        "powerOfAttorney": "321"
+      }
+    },
+    {
+      "id": "beca",
+      "type": "business",
+      "email": "business@gmail.com",
+      "password": "123",
+      "name": "ООО \"Кринж\"",
+      "token": "testToken",
+      "details": {
+        "id": "1d79",
+        "token": "testToken",
+        "details": {
+          "scopeOfActivity": "IT",
+          "region": "Выхухоль",
+          "contacts": "79999999999",
+          "egrulExtractNumber": "123",
+          "registrationCertificateNumber": "123",
+          "inn": "123",
+          "powerOfAttorney": "321"
+        }
+      }
+    },
+    {
+      "id": "1ecf",
+      "type": "business",
+      "email": "business@gmail.com",
+      "password": "123",
+      "name": "ООО \"Кринж\"",
+      "token": "testToken",
+      "details": {
+        "id": "1d79",
+        "token": "testToken",
+        "details": {
+          "scopeOfActivity": "IT",
+          "region": "Выхухоль",
+          "contacts": "79999999999",
+          "egrulExtractNumber": "123",
+          "registrationCertificateNumber": "123",
+          "inn": "123",
+          "powerOfAttorney": "321"
+        }
+      }
+    },
+    {
+      "id": "eb10",
+      "type": "business",
+      "email": "negr",
+      "password": "negr",
+      "name": "negr",
+      "token": "testToken",
+      "details": {
+        "scopeOfActivity": "negr",
+        "region": "negr",
+        "contacts": "negr",
+        "egrulExtractNumber": "negr",
+        "registrationCertificateNumber": "negr",
+        "inn": "negr",
+        "powerOfAttorney": "negr"
+      }
+    },
+    {
+      "id": "3175",
+      "type": "business",
+      "email": "negr",
+      "password": "negr",
+      "name": "negr",
+      "token": "testToken",
+      "details": {
+        "scopeOfActivity": "negr",
+        "region": "negr",
+        "contacts": "negr",
+        "egrulExtractNumber": "negr",
+        "registrationCertificateNumber": "negr",
+        "inn": "negr",
+        "powerOfAttorney": "negr"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "id": "a68e",
+      "name": "Проверить пиво",
+      "userId": "1d79",
+      "details": {
+        "description": {
+          "title": "Описание",
+          "value": "Надо проверить пиво"
+        },
+        "conditions": {
+          "title": "Условия",
+          "value": "Пиво"
+        },
+        "location": {
+          "title": "Расположение",
+          "value": "Пивоварня"
+        },
+        "cost": {
+          "title": "Оплата",
+          "value": "Банка пива"
+        }
+      }
+    },
+    {
+      "id": "a584",
+      "name": "Проверить пиво",
+      "userId": "1d79",
+      "details": {
+        "description": {
+          "title": "Описание",
+          "value": "Надо проверить пиво"
+        },
+        "conditions": {
+          "title": "Условия",
+          "value": "Пиво"
+        },
+        "location": {
+          "title": "Расположение",
+          "value": "Пивоварня"
+        },
+        "cost": {
+          "title": "Оплата",
+          "value": "Банка пива"
+        }
+      }
+    },
+    {
+      "id": "d98c",
+      "name": "negr",
+      "userId": "3175",
+      "details": {
+        "description": {
+          "title": "Описание",
+          "value": "negr"
+        },
+        "conditions": {
+          "title": "Условия",
+          "value": "negr"
+        },
+        "location": {
+          "title": "Расположение",
+          "value": "negr"
+        },
+        "cost": {
+          "title": "Оплата",
+          "value": "negr"
+        }
+      }
+    },
+    {
+      "id": "2a59",
+      "name": "negr",
+      "userId": "3175",
+      "details": {
+        "description": {
+          "title": "Описание",
+          "value": "negr"
+        },
+        "conditions": {
+          "title": "Условия",
+          "value": "negr"
+        },
+        "location": {
+          "title": "Расположение",
+          "value": "negr"
+        },
+        "cost": {
+          "title": "Оплата",
+          "value": "negr"
+        }
+      }
+    },
+    {
+      "id": "3a18",
+      "userId": "1d79",
+      "details": {
+        "description": {
+          "title": "Описание"
+        },
+        "conditions": {
+          "title": "Условия"
+        },
+        "location": {
+          "title": "Расположение"
+        },
+        "cost": {
+          "title": "Оплата"
+        }
+      }
+    },
+    {
+      "id": "0718",
+      "userId": "1d79",
+      "details": {
+        "description": {
+          "title": "Описание"
+        },
+        "conditions": {
+          "title": "Условия"
+        },
+        "location": {
+          "title": "Расположение"
+        },
+        "cost": {
+          "title": "Оплата"
+        }
+      }
+    }
+  ],
+  "messages": [
+    {
+      "id": "8029",
+      "text": "Нужно проверить пиво. Потому что пиво - это круто.",
+      "time": "31.12.2025",
+      "userId": "4786",
+      "chatId": "54f2"
+    }
+  ],
+  "chats": [
+    {
+      "id": "54f2",
+      "offerId": "a68e",
+      "mystery_shopper": "4786",
+      "business": "1d79"
+    },
+    {
+      "id": "591e",
+      "offerId": "a68e",
+      "mystery_shopper": "4786",
+      "business": "1d79"
+    }
+  ],
+  "reports": []
+}

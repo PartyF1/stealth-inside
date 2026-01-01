@@ -1,17 +1,31 @@
-import type { BUSINESS_STEPS } from "./enums";
+import type { BUSINESS_STEPS, SHOPPER_STEPS } from "./enums";
+import type { UserType } from "./user";
 
-export interface IRegistrationData {
+export interface IBusinessRegistrationData {
+  id?: string;
+  type: UserType;
   email: string;
   password: string;
   approvePassword: string;
-  companyName: string;
+  name: string;
   scopeOfActivity: string;
   region: string;
   contacts: string;
-  // Данные для аккредитации компании
-  egrulExtractNumber: string; // Номер выписки ЕГРЮЛ
-  registrationCertificateNumber: string; // Номер свидетельства о регистрации
-  inn: string; // ИНН
-  powerOfAttorney: string; // Доверенность
+  egrulExtractNumber: string;
+  registrationCertificateNumber: string;
+  inn: string;
+  powerOfAttorney: string;
   currentStep: BUSINESS_STEPS;
+}
+
+export interface IUserRegistrationData {
+  id?: string;
+  type: UserType;
+  email: string;
+  password: string;
+  approvePassword: string;
+  name: string;
+  location: string;
+  birthDate: string;
+  currentStep: SHOPPER_STEPS;
 }

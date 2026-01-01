@@ -25,7 +25,7 @@ const TemplatePage = ({ sideContent, mainContent }: ITemplatePage) => {
       </Splitter>
 
       <MainContent>
-        <Header>{mainContent?.header && <>{mainContent.header}</>}</Header>
+        {mainContent?.header && <Header>{mainContent.header}</Header>}
         {mainContent?.content && <>{mainContent.content}</>}
         {mainContent?.footer && <Footer>{mainContent.footer}</Footer>}
       </MainContent>
