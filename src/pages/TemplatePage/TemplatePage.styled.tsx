@@ -9,7 +9,10 @@ export const PageWrapper = styled.div`
 `;
 
 export const SideContent = styled.aside`
+  display: flex;
   width: 40%;
+  gap: 30px;
+  flex-direction: column;
 `;
 
 export const MainContent = styled.main`

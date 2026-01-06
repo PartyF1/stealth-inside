@@ -5,6 +5,8 @@ import { Button, ButtonType } from "../../shared/ui/Button";
 import { Actions } from "./WelcomePage.styled";
 import { Dimension } from "../../shared/types/enums";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/foundation.svg";
+import { Container } from "../../components/DefaultContent/DefaultContent.styled";
 
 const WelcomePage = memo(() => {
   const navigate = useNavigate();
@@ -33,7 +35,27 @@ const WelcomePage = memo(() => {
     ),
     footer: <></>,
   };
-  return <TemplatePage mainContent={mainContent} />;
+
+  return (
+    <TemplatePage
+      mainContent={mainContent}
+      sideContent={{
+        content: (
+          <DefaultContent>
+            <span>
+              Реализация проекта стала возможнойблагодаря поддержке ФГБУ
+              «Фондсодействия развитию малых формпредприятий в
+              научно‑технической сфере»в рамках программы «Студенческийстартап»,
+              входящей в федеральный проект«Платформа
+              университетскоготехнологического предпринимательства».
+            </span>
+            <img src={logo} style={{ maxWidth: 300 }} />
+          </DefaultContent>
+        ),
+        footer: <Container>Ген. директор: +7 950 166 3763</Container>,
+      }}
+    />
+  );
 });
 
 export default WelcomePage;
